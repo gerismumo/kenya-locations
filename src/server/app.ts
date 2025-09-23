@@ -1,6 +1,6 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
-
+import apiRouter from "./routes";
 
 const app = express();
 
@@ -14,12 +14,10 @@ app.use(
 
 app.use(express.json());
 
-
-//link routes here
-const apiRouter = express.Router();
-
-app.get("/", (_req, res) => {
-  res.send("ok");
+app.get("/", (_req: Request, res: Response) => {
+  res.status(200).send("ok");
 });
+
+app.use("/api", apiRouter);
 
 export default app;

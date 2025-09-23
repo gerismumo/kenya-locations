@@ -1,20 +1,26 @@
 {
-  "name": "loc-ke",
+  "name": "kenya-locations",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.ts"
+    "build": "tsc",
+    "dev:api": "nodemon ./src/server/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gerald Mumo <https://github.com/gerismumo>",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "fuse.js": "^7.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

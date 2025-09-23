@@ -1,15 +1,9 @@
-/**
- * Interface for County data
- */
 export interface ICounty {
   code: string;
   name: string;
   type: string;
 }
 
-/**
- * Interface for Constituency data
- */
 export interface IConstituency {
   code: string;
   name: string;
@@ -18,9 +12,6 @@ export interface IConstituency {
   type: string;
 }
 
-/**
- * Interface for Ward data
- */
 export interface IWard {
   code: string;
   name: string;
@@ -31,9 +22,6 @@ export interface IWard {
   type: string;
 }
 
-/**
- * Interface for Locality data
- */
 export interface ILocality {
   code: string;
   name: string;
@@ -42,9 +30,6 @@ export interface ILocality {
   type: string;
 }
 
-/**
- * Interface for Area data
- */
 export interface IArea {
   code: string;
   name: string;
@@ -54,17 +39,6 @@ export interface IArea {
   type: string;
 }
 
-/**
- * Search result interface
- */
-export interface SearchResult {
-  type: "county" | "constituency" | "ward" | "locality" | "area";
-  item: ICounty | IConstituency | IWard | ILocality | IArea;
-}
-
-/**
- * Available search types
- */
 export type SearchType =
   | "county"
   | "constituency"
@@ -72,9 +46,11 @@ export type SearchType =
   | "locality"
   | "area";
 
-/**
- * Data version options
- */
+export interface SearchResult {
+  type: SearchType;
+  item: ICounty | IConstituency | IWard | ILocality | IArea;
+}
+
 export interface KenyaDivisionsOptions {
   dataVersion?: string;
 }

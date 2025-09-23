@@ -1,8 +1,6 @@
 import * as dotenv from "dotenv";
 dotenv.config({ path: ".env" });
 
-
-
 import app from "./app";
 
 const HOST_NAME = process.env.HOST_NAME || "localhost";
