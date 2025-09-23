@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Gerald Mumo <https://github.com/gerismumo>",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
